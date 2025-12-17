@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页计算器</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon/TAB.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="calculator">
+        <div class="language-selector">
+            <select id="languageSelect" class="language-select">
+                <option value="zh">中文</option>
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+        
+        <div class="mode-toggle">
+            <button id="standardMode" class="mode-btn active" data-lang="standard">标准</button>
+            <button id="scientificMode" class="mode-btn" data-lang="scientific">科学</button>
+        </div>
+        
+        <div class="display">
+            <div class="previous-operand"></div>
+            <div class="current-operand">0</div>
+        </div>
+        
+        <div class="buttons" id="calculator-buttons">
+            <!-- 标准计算器按钮 -->
+            <button class="btn function" data-action="clear">C</button>
+            <button class="btn function" data-action="delete">DEL</button>
+            <button class="btn function" data-action="percent">%</button>
+            <button class="btn operator" data-operator="/">÷</button>
+            
+            <button class="btn number" data-number="7">7</button>
+            <button class="btn number" data-number="8">8</button>
+            <button class="btn number" data-number="9">9</button>
+            <button class="btn operator" data-operator="*">×</button>
+            
+            <button class="btn number" data-number="4">4</button>
+            <button class="btn number" data-number="5">5</button>
+            <button class="btn number" data-number="6">6</button>
+            <button class="btn operator" data-operator="-">−</button>
+            
+            <button class="btn number" data-number="1">1</button>
+            <button class="btn number" data-number="2">2</button>
+            <button class="btn number" data-number="3">3</button>
+            <button class="btn operator" data-operator="+">+</button>
+            
+            <button class="btn number zero" data-number="0">0</button>
+            <button class="btn number" data-number=".">.</button>
+            <button class="btn equals" data-action="equals">=</button>
+        </div>
+        
+        <div class="scientific-buttons hidden" id="scientific-buttons">
+            <button class="btn function" data-action="sin">sin</button>
+            <button class="btn function" data-action="cos">cos</button>
+            <button class="btn function" data-action="tan">tan</button>
+            <button class="btn function" data-action="log">log</button>
+            
+            <button class="btn function" data-action="ln">ln</button>
+            <button class="btn function" data-action="sqrt">√</button>
+            <button class="btn function" data-action="pow">x²</button>
+            <button class="btn function" data-action="pow3">x³</button>
+            
+            <button class="btn function" data-action="powx">xʸ</button>
+            <button class="btn function" data-action="factorial">n!</button>
+            <button class="btn function" data-action="pi">π</button>
+            <button class="btn function" data-action="e">e</button>
+        </div>
+        
+        <div class="links-section">
+            <button class="link-btn github-btn" onclick="window.open('https://github.com/syweb-dev/Web-based-math-calculator', '_blank')">
+                <span class="btn-icon">📦</span>
+                <span class="btn-text" data-lang="github">点击跳转GitHub仓库</span>
+            </button>
+            <button class="link-btn dev-btn" onclick="window.open('https://www.sysanyou.dpdns.org/', '_blank')">
+                <span class="btn-icon">👨‍💻</span>
+                <span class="btn-text" data-lang="developer">点击跳转开发者个人网站</span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="JavaScript.js"></script>
+</body>
+</html>
